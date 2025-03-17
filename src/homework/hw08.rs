@@ -23,6 +23,8 @@ fn main() {
     ];
 
     test_data.iter().for_each(|(n, prime)| {
-        assert_eq!(is_prime(*n), *prime);
+        let result = is_prime(*n);
+        println!("Number: {}, Is prime: {}", n, result);
+        assert_eq!(result, *prime);
     });
 }
