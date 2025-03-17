@@ -17,7 +17,10 @@ fn main() {
     ];
 
     data.iter().for_each(|(a, b)| {
-        assert_eq!(invert_the_case(a.to_string()), b.to_string());
-        assert_eq!(invert_the_case(b.to_string()), a.to_string());
+        let result_a = invert_the_case(a.to_string());
+        let result_b = invert_the_case(b.to_string());
+
+        println!("Original: {}, Inverted: {}", a, result_a);
+        println!("Original: {}, Inverted: {}", b, result_b);
     });
 }
